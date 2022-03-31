@@ -22,7 +22,7 @@ namespace WebApiCommander.Controllers
         [HttpGet]
         public ActionResult <IEnumerable<Command>> GetAllCommands()
         {
-            var commandItems = _repository.GetAppCommands();
+            var commandItems = _repository.GetAllCommands();
 
             return Ok(commandItems);
         }
@@ -30,7 +30,7 @@ namespace WebApiCommander.Controllers
         [HttpGet("{id}")]
         public ActionResult <Command> GetCommandById(int id)
         {
-            var commandItem = _repository.GetCommandById(id);
+            var commandItem = _repository.GetCommandById(id); 
             return Ok(commandItem);
         }
     }
