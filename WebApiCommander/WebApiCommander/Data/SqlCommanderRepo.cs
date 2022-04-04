@@ -28,6 +28,11 @@ namespace WebApiCommander.Data
             return (_context.SaveChanges() >= 0);
         }
 
+        public void UpdateCommand(Command cmd)
+        {
+            //Nothing
+        }
+
         IEnumerable<Command> ICommanderRepo.GetAllCommands()
         {
             return _context.Commands.ToList();
