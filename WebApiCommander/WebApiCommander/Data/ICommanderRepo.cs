@@ -10,5 +10,6 @@ namespace WebApiCommander.Data
         Command GetCommandById(int id);
         void CreateCommand(Command cmd);
         void UpdateCommand(Command cmd);
+        void DeleteCommand(Command cmd);
     }
 }
